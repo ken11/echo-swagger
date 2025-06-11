@@ -5,7 +5,7 @@ go 1.17
 require (
 	github.com/labstack/echo/v4 v4.9.0
 	github.com/stretchr/testify v1.8.2
-	github.com/swaggo/files/v2 v2.0.0
+	github.com/swaggo/files/v2 v2.0.1
 	github.com/swaggo/swag v1.16.2
 	github.com/swaggo/swag/v2 v2.0.0-rc4
 	sigs.k8s.io/yaml v1.3.0
