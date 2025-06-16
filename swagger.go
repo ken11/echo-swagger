@@ -164,7 +164,7 @@ func EchoWrapHandler(options ...func(*Config)) echo.HandlerFunc {
 			_ = c.Redirect(http.StatusMovedPermanently, matches[1]+"/"+"index.html")
 		case "index.html":
 			_ = index.Execute(c.Response().Writer, config)
-		case "doc.json":
+		case "swagger.json":
 			doc, err := swag.ReadDoc(config.InstanceName)
 			if err != nil {
 				c.Error(err)
@@ -173,7 +173,7 @@ func EchoWrapHandler(options ...func(*Config)) echo.HandlerFunc {
 			}
 
 			_, _ = c.Response().Writer.Write([]byte(doc))
-		case "doc.yaml":
+		case "swagger.yaml":
 			jsonString, err := swag.ReadDoc(config.InstanceName)
 			if err != nil {
 				c.Error(err)
